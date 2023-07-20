@@ -36,7 +36,7 @@ const page = () => {
         <div className="max-w-sm mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl border border-slate-700">
         <div className="md:flex">
           <div className="md:shrink-0">
-            <img className="h-48 w-full bg-contain md:h-full md:w-48" src={charData?.image} alt="Modern building architecture"/>
+            <img className="h-48 w-full bg-contain md:h-full md:w-48" src={charData?.image ? charData?.image :"https://th.bing.com/th/id/OIP.ucacgV1h6gCJ6Tet5rN8XwHaJT?pid=ImgDet&rs=1" } alt="Modern building architecture"/>
           </div>
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{charData?.name}</div>
