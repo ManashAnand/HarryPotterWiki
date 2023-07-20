@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState } from "react";
 
-const FilterContext = createContext({})
+const FilterContext = createContext()
 
 export const FilterContextProvider = ({ children }) => {
 

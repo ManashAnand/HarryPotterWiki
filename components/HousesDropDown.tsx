@@ -9,10 +9,10 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { DropDownProps } from '@/types';
 import { useFilterContext } from '@/context/Filters';
 
-const HousesDropDown = (
+const HousesDropDown: React.FC = (
   // {house,setHouse} : DropDownProps
   ) => {
-    const {house,setHouse} = useFilterContext<String>();
+    const {house,setHouse} = useFilterContext();
 
     const handleChange = (event: SelectChangeEvent) => {
         setHouse(event.target.value);

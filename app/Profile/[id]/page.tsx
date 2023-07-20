@@ -2,15 +2,12 @@
 import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import axios from 'axios';
+import { CharacterProps } from '@/types';
 
 const page = () => {
   const [id,setId] = useState("");
   const pathname = usePathname();
-  const [charData,setCharData] = useState<object>({
-    image: String,
-    name: String,
-    dateOfBirth: String,
-  });
+  const [charData,setCharData] = useState<CharacterProps>();
   const getDataAboutChar = async (id:String) => {
     const { data } = await axios.get(`https://hp-api.onrender.com/api/character/${id}`);
     console.log(id);
